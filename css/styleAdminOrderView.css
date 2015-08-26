@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contianer{
+	width: 968px;
+	padding: 25px;
+	margin: 25px auto 50px auto;
+	border: double #000 6px;
+}
+
+.title{
+	font-family: 'Limelight', cursive;
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+	padding-top: 13px;
+	display: block;
+	width: 269px;
+	height: 53px;
+	background-image: url(/images/assignment2/titleShort.jpg);
+	background-repeat: no-repeat;
+	margin: 0px auto 20px auto;
+}
+
+#table ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	display: table-row;
+	
+}
+
+#table li{
+	font-family: 'Simonetta', cursive;
+	font-size: 21px;
+	color: #000;
+	display: table-cell;
+	width: 160px;
+	padding: 15px;
+	border: solid #000 1px;
+}
+
+#generalInfo ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	display: table-row;
+	
+}
+
+#generalInfo li{
+	font-family: 'Simonetta', cursive;
+	font-size: 21px;
+	color: #000;
+	display: table-cell;
+	width: 452px;
+	padding: 15px;
+	border: solid #000 1px; 
+}
+
+#complete {
+	font-family: 'Limelight', cursive;
+	font-size: 18px;
+	color: #FFF;
+	display: block;
+	border: none;
+	background-image: url(/images/assignment2/create.jpg);
+	width: 250px;
+	height: 40px;
+	margin: 25px auto 0px auto;
+}
+
+#complete:hover{
+	background-image: url(/images/assignment2/createHover.jpg);
+	color: #000;
+}
+
+#uncomplete {
+	font-family: 'Limelight', cursive;
+	font-size: 18px;
+	color: #FFF;
+	display: block;
+	border: none;
+	background-image: url(/images/assignment2/create.jpg);
+	width: 250px;
+	height: 40px;
+	margin: 25px auto 0px auto;
+}
+
+#uncomplete:hover{
+	background-image: url(/images/assignment2/createHover.jpg);
+	color: #000;
+}
+
+.back {
+	font-family: 'Limelight', cursive;
+	font-size: 18px;
+	color: #FFF;
+	display: block;
+	background-image: url(/images/assignment2/addCat.jpg);
+	border: none;
+	background-color: transparent;
+	width: 160px;
+	height: 40px;
+	margin: 25px auto 0px auto;
+}
+
+.back:hover{
+	background-image: url(/images/assignment2/addCatHover.jpg);
+	color: #000;
+}
+
+a{
+	text-decoration: none;
+}

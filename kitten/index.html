@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kitten's Ordering System</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/styleIndex.css">
+<!--font-->   
+    <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet' type='text/css'>
+<!--font-->    
+</head>
+
+<body>
+
+<div id="contianer">
+<!--start navigation--> 
+	<nav>
+    <ul class="buttons" id="left">
+		<li><a href="{{ url|safe }}">{{ url_linktext }}</a></li>
+		<li><a href="/kitten/">Home</a></li>
+    </ul>
+    <ul class="buttons" id="right">
+		<li><a href="/kitten/places">Places</a></li>
+        <li><a href="/kitten/order">Order</a></li>
+    </ul>
+	</nav>
+<!-- end navigation -->
+
+<!--start img slide-->
+<div id="slide">
+	<img alt="#" src="/images/assignment2/slide1.jpg">
+    <img alt="#" src="/images/assignment2/slide2.jpg">
+</div>
+<!-- end img slide -->
+
+<!--guide to order kitten--> 
+	<section>
+		<p id="title">How to order kitten</p>
+        <ul>
+			<li><p>Step 1: Create a <a href="/kitten/order">new order</a></p></li>
+			<li><p>Step 2: Wait for confirmation. We will contact you via email you used to order</p></li>
+			<li><p>Step 3: Receive your order at any of the <a href="/kitten/places">2 stores</a></p></li>
+        </ul>
+		<p id="trick">*TRICK*: When you are logging into the order page, a new ID for the order will be generated in the following format http://s3372702-s3426110.appspot.com/kitten/order/{order-ID}. Remeber that ID so you check back the order's status later at the same link. In case we accidently mark it as completed before it is, please <a href="mailto:liemlyquan@gmail.com">contact us</a> immediately. We will give discount for that order </p>
+		<p id="delivery"> Delivery will be available SOON</p>
+
+<!-- page views counter -->
+        <div id="digit">
+        	<a href="http://www.digits.com" target="_blank">
+    		<img src="http://counter.digits.com/?counter={aad4e06b-d8d6-c8b4-2d59-02eccb1afbbe}&template=simple" 
+     		alt="Hit Counter by Digits" border="0"  />
+			</a>
+			<!-- code and tool is freely provided by digits.com, the hyperlink is kept to show respect for their work-->
+        </div>
+	</section>
+
+</div>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="/script/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#slide').cycle({
+		fx: 'fade'
+	});
+});
+</script>
+  
+</body>
+</html>

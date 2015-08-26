@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Places</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/stylePlace.css">
+
+<!--font-->   
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet' type='text/css'>
+<!--font--> 
+ 
+</head>
+   
+<body onload="store1()">
+
+<!--start of the container--> 
+<div id="contianer">
+
+<!--navigation--> 
+	<nav id="navigation">
+    <ul class="buttons" id="left">
+    <li><a href="{{ url|safe }}">{{ url_linktext }}</a></li>
+		<li><a href="/kitten/">Home</a></li>
+    </ul>
+    <ul class="buttons" id="right">
+		<li><a href="/kitten/places">Places</a></li>
+        <li><a href="/kitten/order">Order</a></li>
+    </ul>
+	</nav>
+<!--navigation--> 
+
+<!--map-->
+    <div id="map-canvas"></div>
+<!--end of map-->
+
+<!--stores--> 
+	<div id ="showNear"></div>
+
+	<nav id="stores">
+    <ul>
+    	<li><button type="button" onclick="store1()" class="store">First store</button></li>
+  		<li><button type="button" onclick="store2()" class="store">Second store</button></li>
+  		<li><button type="button" onclick="getLocation()" class="store">Which is nearer to me</button></li>
+  		<!-- The locations of these two store is two RMIT Campus in Ho Chi Minh City -->
+    </ul>
+    </nav>
+<!--end of stores--> 
+    
+</div>
+<!--end of the container-->
+<script type="text/javascript"src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLl8-XMMMh-ACiNETlbe5ayh3kt6P6nUs&sensor=true"></script>
+<script type="text/javascript" src="/script/places.js"></script>  
+</body>
+</html>

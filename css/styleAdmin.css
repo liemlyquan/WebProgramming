@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contianer{
+	width: 968px;
+	padding: 25px;
+	margin: 25px auto 50px auto;
+	border: double #000 6px;
+}
+
+.title{
+	font-family: 'Limelight', cursive;
+	font-size: 30px;
+	text-align: center;
+	color: #FFF;
+	padding-top: 13px;
+	display: block;
+	width: 269px;
+	height: 53px;
+	background-image: url(/images/assignment2/titleShort.jpg);
+	background-repeat: no-repeat;
+	margin: 0px auto 20px auto;
+}
+
+ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	display: table-row;
+	
+}
+
+li{
+	font-family: 'Simonetta', cursive;
+	font-size: 21px;
+	color: #000;
+	display: table-cell;
+	width: 210px;
+	padding: 15px 15px 15px 15px;
+	border: solid #000 1px;
+}
+
+.delete{
+	font-family: 'Limelight', cursive;
+	font-size: 18px;
+	color: #FFF;
+	display: block;
+	background-image: url(/images/assignment2/addCat.jpg);
+	border: none;
+	width: 160px;
+	height: 40px;
+	margin: 0px auto 0px auto;	
+}
+
+.delete:hover{
+	background-image: url(/images/assignment2/addCatHover.jpg);
+	color: #000;
+}
+
+#deleteAll{
+	font-family: 'Limelight', cursive;
+	font-size: 18px;
+	color: #FFF;
+	display: block;
+	border: none;
+	width: 250px;
+	height: 40px;
+	margin: 25px auto 25px auto;
+	background-image: url(/images/assignment2/create.jpg);
+}
+
+#deleteAll:hover{
+	background-image: url(/images/assignment2/createHover.jpg);
+	color: #000;
+}
+
+#logOut{
+	font-family: 'Simonetta', cursive;
+	font-size: 24px;
+	margin-left: 453px;
+}

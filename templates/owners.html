@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+	<title>Cat Owners</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/owners.css">
+</head>
+<body>
+
+<div id="container">
+	<p>All cat owners.</p>
+
+	{% for owners in cat_owners %}
+	<p>{{ owners.name }}</p>
+	{% endfor %}
+	<a href="/tutorial8">Tutorial 8 Main</a>
+</div>
+
+</body>
+</html>
+{% endautoescape %}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tutorial 3</title>
+<!--link-->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/style3.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+<!--link-->
+</head>
+<body>
+<section id="section1">
+    <img alt="#" src="/images/logo.png">
+    <nav>
+    	<div id="menu1">
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/html/about.html">About</a></li>
+        <li><a href="javascript:animatedcollapse.toggle('menu2')">Tutorial</a></li>
+        </ul> 
+        </div>
+          
+        <div id="menu2">
+        <ul>
+        <li><a href="/html/tutorial2.html">Week 2</a></li>
+        <li><a href="">Week 3</a></li>
+        <li><a href="/html/tutorial4.html">Week 4</a></li>
+        <li><a href="/html/element.html">Week 5</a></li>
+        <li><a href="/tutorial6">Week 6</a></li>
+        <li><a href="/tutorial7">Week 7</a></li>
+        <li><a href="/tutorial8">Week 8</a></li>
+        <li><a href="/tutorial9">Week 9</a></li>
+        <li><a href="/tutorial10">Week 10</a></li>
+        </ul>
+        </div>     
+    </nav>
+    
+    <article>
+    <p id="title">Tutorial 3</p>
+    <p id="subTitle">Learn how to access HTML5 features. Video time!</p>
+    </article>
+    
+    <div id="video">
+	<video id="video1" src="http://video.webmfiles.org/big-buck-bunny_trailer.webm" autoplay controls></video>
+    </div>
+    
+    <div id="video2">
+    <iframe width="420" height="345" src="//www.youtube.com/embed/ch-SSYg7R8k"></iframe>
+    </div>
+
+</section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="/script/script.js"></script>
+<script type="text/javascript" src="/script/animatedcollapse.js"></script>
+<script type="text/javascript">
+animatedcollapse.addDiv('menu2', 'fade=1,height=80px')
+animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
+    //$: Access to jQuery
+    //divobj: DOM reference to DIV being expanded/ collapsed. Use "divobj.id" to get its ID
+    //state: "block" or "none", depending on state
+}
+animatedcollapse.init()
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+#contianer{
+	width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+nav{
+	background-image: url(/images/assignment2/nav.jpg);
+	height: 150px;
+}
+
+.buttons ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.buttons li{
+	display: block;
+	width: 90px;
+	text-align: center;
+}
+
+.buttons a{
+	font-family: 'Simonetta', cursive;
+	font-size: 30px;
+	color: #FFF;
+	text-decoration: none;
+}
+
+.buttons a:hover{
+	font-weight: bold;
+}
+
+#left li{
+	float: left;
+	margin-left: 25px;
+}
+
+#right li{
+	float: right;
+	margin-right: 25px;
+}
+
+#left{
+	margin-left: 180px;
+	position: relative;
+	top: 110px;
+}
+
+#right{
+	margin-right: 180px;
+	position: relative;
+	top: 110px;
+}
+
+#create {
+	font-family: 'Limelight', cursive;
+	font-size: 18px;
+	color: #FFF;
+	display: block;
+	border: none;
+	background-image: url(/images/assignment2/create.jpg);
+	width: 250px;
+	height: 40px;
+	margin: 50px auto 0px auto;
+}
+
+#create:hover{
+	background-image: url(/images/assignment2/createHover.jpg);
+	color: #000;
+}
+
+img{
+	display:block;
+	margin: 140px auto 0px auto;
+}
+

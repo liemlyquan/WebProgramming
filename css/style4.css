@@ -1,0 +1,326 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: "Courier New";
+}
+
+/*****style section1*****/
+#section1 {
+	background: url(/images/tutorial4/background.jpg)50% 0 no-repeat fixed; 
+	height: 768px; 
+	width: 1349px;
+    position: relative; 
+    box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+
+#section1 img{
+	position: relative;
+	top: 25px;
+	left: 277px;
+}
+
+/*****style navigation*****/
+#section1 nav{
+	position: relative;
+	right: 50px;
+	width: 680px;
+	height: 57px;
+	float: right;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+#menu1 ul{	
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#menu1 li{
+	float: left;
+	margin-bottom: 0px;
+}
+
+#menu1 a{
+	font-family: 'Roboto Slab', serif;
+	font-size: 21px;
+	text-decoration:none;
+	color: #000;
+    display:block;
+	padding-top: 30px;
+	padding-bottom: 0px;
+	width: 200px;
+	height: 29px;
+	margin-left: 13px;
+	margin-right: 13px;
+	text-align: center;
+}
+
+#menu1 a:hover{
+	background-color: #000;
+	color: #FFF;
+	font-weight:bold;
+}
+
+#menu2{
+	display: none;
+	position: absolute;
+	top: 58px;
+}
+
+#menu2 ul{	
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#menu2 li{
+	float: left;
+	margin-bottom: 0px;
+}
+
+#menu2 a{
+	font-family: 'Roboto Slab', serif;
+	font-size: 17px;
+	text-decoration:none;
+	color: #333;
+    display:block;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	width: 226px;
+	height: 20px;
+	text-align: center;
+}
+
+#menu2 a:hover{
+	background-color: #000;
+	color: #FFF;
+}
+/*****end style navigation*****/
+
+#title{
+	font-family: 'Roboto Slab', serif;
+	font-size: 80px;
+	text-align: center;
+	color: #000;
+	width: 450px;
+	position: absolute;
+	font-weight: 100;
+	top: 220px;
+	left: 100px;
+}
+
+#subTitle{
+	font-size: 29px;
+	text-align: center;
+	width: 450px;
+	position: absolute;
+	top:315px;
+	left: 100px;
+}
+/*****end style section1*****/
+
+/*****style section2*****/
+#section2{
+	width: 1349px;
+	height: 600px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);	
+}
+
+#section2 article{
+	position: relative;
+	width: 600px;
+	height: 520px;
+	background-image: url(/images/tutorial4/ransom-note.jpg);
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	background-color:#CCC;
+	padding-top: 30px;
+	padding-left: 70px;
+	
+}
+
+#section2 p{
+	font-size: 25px;
+	font-weight:bold;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+/*****the ransom note*****/
+span.g{
+	font-family: 'Chela One', cursive;
+	font-size: 69px;
+	color: #FFF;
+	display:inline-block;
+	background-color: #333;
+	-ms-transform: rotate(5deg); 
+	-webkit-transform: rotate(5deg); 
+	-moz-transform: rotate(5deg);
+}
+
+span.i{
+	font-family: 'Croissant One', cursive;
+	font-size: 75px;
+	display:inline-block;
+	-ms-transform: rotate(2deg); 
+	-webkit-transform: rotate(2deg); 
+	-moz-transform: rotate(2deg);
+}
+
+span.v{
+	font-family: 'Rum Raisin', sans-serif;
+	font-size: 55px;
+	background-color: #999;
+	display:inline-block;
+	-ms-transform: rotate(-3deg); 
+	-webkit-transform: rotate(-3deg); 
+	-moz-transform: rotate(-3deg);
+}
+
+span.e{
+	font-family: 'Graduate', cursive;
+	font-size: 60px;
+	display:inline-block;
+	-ms-transform: rotate(2deg); 
+	-webkit-transform: rotate(2deg); 
+	-moz-transform: rotate(2deg);
+}
+
+span.u{
+	font-family: 'Joti One', cursive;
+	font-size: 57px;
+	display:inline-block;
+	-ms-transform: rotate(-5deg); 
+	-webkit-transform: rotate(-5deg); 
+	-moz-transform: rotate(-5deg);
+}
+
+span.s{
+	font-family: 'Numans', sans-serif;
+	font-size: 68px;
+	display:inline-block;
+	-ms-transform: rotate(3deg); 
+	-webkit-transform: rotate(3deg); 
+	-moz-transform: rotate(3deg);
+}
+
+span.o{
+	font-family: 'Leckerli One', cursive;
+	font-size: 60px;
+	display:inline-block;
+	-ms-transform: rotate(17deg); 
+	-webkit-transform: rotate(17deg); 
+	-moz-transform: rotate(17deg);
+}
+
+span.d{
+	font-family: 'Jacques Francois', serif;
+	font-size: 65px;
+	background-color: #515151;
+	color: #dbdbdb;
+	display:inline-block;
+	-ms-transform: rotate(-3deg); 
+	-webkit-transform: rotate(-3deg); 
+	-moz-transform: rotate(-3deg);
+}
+
+span.m{
+	font-family: 'Chela One', cursive;
+	font-size: 68px;
+	border-style: solid;
+	border-width: 2px;
+	display:inline-block;
+	-ms-transform: rotate(10deg); 
+	-webkit-transform: rotate(10deg); 
+	-moz-transform: rotate(10deg);
+}
+
+span.a{
+	font-family: 'Croissant One', cursive;
+	font-size: 57px;
+	background-color: #aaaaaa;
+	display: inline-block;
+	-ms-transform: rotate(-7deg); 
+	-webkit-transform: rotate(-7deg); 
+	-moz-transform: rotate(-7deg);
+}
+
+span.r{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 57px;
+	display: inline-block;
+	-ms-transform: rotate(12deg); 
+	-webkit-transform: rotate(12deg); 
+	-moz-transform: rotate(12deg);
+}
+
+span.k{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 60px;
+	background-color: #999;
+	display: inline-block;
+	-ms-transform: rotate(10deg); 
+	-webkit-transform: rotate(10deg); 
+	-moz-transform: rotate(10deg);
+}
+
+span.n{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 67px;
+	display: inline-block;
+	-ms-transform: rotate(11deg); 
+	-webkit-transform: rotate(11deg); 
+	-moz-transform: rotate(11deg);
+}
+
+span.t{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 59px;
+	background-color: #303030;
+	color: #CCC;
+	display: inline-block;
+	-ms-transform: rotate(-10deg); 
+	-webkit-transform: rotate(-10deg); 
+	-moz-transform: rotate(-10deg);
+}
+
+span.h{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 56px;
+	border-style: solid;
+	border-width: 2px;
+	display: inline-block;
+	-ms-transform: rotate(-12deg); 
+	-webkit-transform: rotate(-12deg); 
+	-moz-transform: rotate(-12deg);
+}
+
+span.l{
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 77px;
+	display: inline-block;
+	-ms-transform: rotate(20deg); 
+	-webkit-transform: rotate(20deg); 
+	-moz-transform: rotate(20deg);
+}
+
+span.space{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 80px;
+	background-color: #CCC;
+	color: #333;
+}
+
+/*****end the ransom note*****/
+
+/*****end style section2*****/
+
+
+
+
+

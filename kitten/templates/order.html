@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+	<title>Order {{ order.key.id() }}</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/styleOrder.css">
+<!--font-->   
+    <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet' type='text/css'>
+<!--font-->  
+
+</head>
+<body>
+<!--start of the container--> 
+<div id="contianer">
+
+<!--navigation--> 
+	<nav>
+    <ul class="buttons" id="left">
+		<li><a href="{{ url|safe }}">{{ url_linktext }}</a></li>
+		<li><a href="/kitten/">Home</a></li>
+    </ul>
+    <ul class="buttons" id="right">
+		<li><a href="/kitten/places">Places</a></li>
+        <li><a href="/kitten/order">Order</a></li>
+    </ul>
+	</nav>
+<!--navigation--> 
+
+<!--start of the menu-->
+	<section id="menu">
+
+<!--topping1-->
+	<section class="toppings" id="topping1">
+    <p>Classic<br/>Salami And Cheese</p>
+    <div class="imgContainer"><img id="image1" src="/images/assignment2/Big-White-SalamiAndCheese.png" data-tooltip="sticky1" data-reveal-id="myModal"></div>
+	<form method="post" action="/kitten/order/{{ order.key.id() }}">
+	<div>
+		<label for="size">Size: </label>
+		<select name="size" id="size1" onChange="swapImage1()">
+			<option value="Big">Big</option>
+			<option value="Medium">Medium</option>
+			<option value="Small">Small</option>
+		</select>
+	</div>
+	<div>
+		<label for="type">Type: </label>
+		<select name="type" id="type1" onChange="swapImage1()"/>
+			<option value="White">White</option>
+			<option value="Black">Black</option>
+            <option value="Rainbow">Rainbow</option>
+		</select>
+	</div>
+	<div>
+		<label for="number">Number:</label>
+		<input type="number" name="number" min="1" max="100" value="1">
+    </div> 
+	<div>
+    	<input type="submit" value="Add kitten" name="add1" class="add">
+    </div>
+	</form>
+    </section>
+<!--end of topping1-->
+
+<!--topping2-->
+	<section class="toppings" id="topping2">
+    <p>Pesto<br/>For Herd Lover</p>
+    <div class="imgContainer"><img id="image2" src="/images/assignment2/Big-White-Pesto.png" data-tooltip="sticky2" data-reveal-id="myModal"></div>
+	<form method="post" action="/kitten/order/{{ order.key.id() }}">
+	<div>
+		<label for="size">Size: </label>
+		<select name="size" id="size2" onChange="swapImage2()">
+			<option value="Big">Big</option>
+			<option value="Medium">Medium</option>
+			<option value="Small">Small</option>
+		</select>
+	</div>
+	<div>
+		<label for="type">Type: </label>
+		<select name="type" id="type2" onChange="swapImage2()">
+			<option value="White">White</option>
+			<option value="Black">Black</option>
+            <option value="Rainbow">Rainbow</option>
+		</select>
+	</div>
+	<div>
+		<label for="number">Number:</label>
+		<input type="number" name="number" min="1" max="100" value="1">
+    </div> 
+	<div>
+    	<input type="submit" value="Add kitten" name="add2" class="add">
+    </div>
+	</form>
+    </section>
+<!--end of topping2-->
+
+<!--topping3-->
+	<section class="toppings" id="topping3">
+    <p>Mozzarella<br/>And Tomato</p>
+    <div class="imgContainer"><img id="image3" src="/images/assignment2/Big-White-MozzarellaAndTomato.png" data-tooltip="sticky3" data-reveal-id="myModal"></div>
+	<form method="post" action="/kitten/order/{{ order.key.id() }}">
+	<div>
+		<label for="size">Size: </label>
+		<select name="size" id="size3" onChange="swapImage3()">
+			<option value="Big">Big</option>
+			<option value="Medium">Medium</option>
+			<option value="Small">Small</option>
+		</select>
+	</div>
+	<div>
+		<label for="type">Type: </label>
+		<select name="type" id="type3" onChange="swapImage3()">
+			<option value="White">White</option>
+			<option value="Black">Black</option>
+            <option value="Rainbow">Rainbow</option>
+		</select>
+	</div>
+	<div>
+		<label for="number">Number:</label>
+		<input type="number" name="number" min="1" max="100" value="1">
+    </div> 
+	<div>
+    	<input type="submit" value="Add kitten" name="add3" class="add">
+    </div>
+	</form>
+    </section>
+<!--end of topping3-->
+
+<!--topping4-->
+	<section class="toppings" id="topping4">
+    <p>Olive, Red Pepper<br/>And Mushroom</p>
+    <div class="imgContainer"><img id="image4" src="/images/assignment2/Big-White-OliveRedPeperAndMushroom.png" data-tooltip="sticky4" data-reveal-id="myModal"></div>
+	<form method="post" action="/kitten/order/{{ order.key.id() }}">
+	<div>
+		<label for="size">Size: </label>
+		<select name="size" id="size4" onChange="swapImage4()">
+			<option value="Big">Big</option>
+			<option value="Medium">Medium</option>
+			<option value="Small">Small</option>
+		</select>
+	</div>
+	<div>
+		<label for="type">Type: </label>
+		<select name="type" id="type4" onChange="swapImage4()">
+			<option value="White">White</option>
+			<option value="Black">Black</option>
+            <option value="Rainbow">Rainbow</option>
+		</select>
+	</div>
+	<div>
+		<label for="number">Number:</label>
+		<input type="number" name="number" min="1" max="100" value="1">
+    </div> 
+	<div>
+    	<input type="submit" value="Add kitten" name="add4" class="add">
+    </div>
+	</form>
+    </section>
+<!--end of topping4-->
+
+<!--topping5-->
+	<section class="toppings" id="topping5">
+    <p>Chocalate Sauce<br/>And Sprinkle</p>
+    <div class="imgContainer"><img id="image5" src="/images/assignment2/Big-White-ChocalateAndPrinkle.png" data-tooltip="sticky5" data-reveal-id="myModal"></div>
+	<form method="post" action="/kitten/order/{{ order.key.id() }}">
+	<div>
+		<label for="size">Size: </label>
+		<select name="size" id="size5" onChange="swapImage5()">
+			<option value="Big">Big</option>
+			<option value="Medium">Medium</option>
+			<option value="Small">Small</option>
+		</select>
+	</div>
+	<div>
+		<label for="type">Type: </label>
+		<select name="type" id="type5" onChange="swapImage5()">
+			<option value="White">White</option>
+			<option value="Black">Black</option>
+            <option value="Rainbow">Rainbow</option>
+		</select>
+	</div>
+	<div>
+		<label for="number">Number:</label>
+		<input type="number" name="number" min="1" max="100" value="1">
+    </div> 
+	<div>
+    	<input type="submit" value="Add kitten" name="add5" class="add">
+    </div>
+	</form>
+    </section>
+<!--end of topping5-->
+
+<!--topping6-->
+	<section class="toppings" id="topping6">
+    <p>Magic Blue Sauce<br/>And Fairy Dust</p>
+    <div class="imgContainer"><img id="image6" src="/images/assignment2/Big-White-BlueSauceAndFairyDust.png" data-tooltip="sticky6" data-reveal-id="myModal"></div>
+	<form method="post" action="/kitten/order/{{ order.key.id() }}">
+	<div>
+		<label for="size">Size: </label>
+		<select name="size" id="size6" onChange="swapImage6()">
+			<option value="Big">Big</option>
+			<option value="Medium">Medium</option>
+			<option value="Small">Small</option>
+		</select>
+	</div>
+	<div>
+		<label for="type">Type: </label>
+		<select name="type" id="type6" onChange="swapImage6()">
+			<option value="White">White</option>
+			<option value="Black">Black</option>
+            <option value="Rainbow">Rainbow</option>
+		</select>
+	</div>
+	<div>
+		<label for="number">Number:</label>
+		<input type="number" name="number" min="1" max="100" value="1">
+    </div> 
+	<div>
+    	<input type="submit" value="Add kitten" name="add6" class="add">
+    </div>
+	</form>
+    </section>
+<!--end of topping6-->
+
+	</section>
+<!--end of the menu-->
+
+<!--Start of order list-->
+	<section id="order">
+    
+	<p class="title"> Order list</p>
+    
+    <ul>
+        <li>Cat's type</li>
+        <li>Cat's size</li>
+        <li>Cat's topping</li>
+        <li>Quantity</li>
+        <li>Cash</li>
+    </ul>
+	{% for kitten in kittens %}
+    <ul>
+        <li>{{ kitten.type }}</li>
+        <li>{{ kitten.size }}</li>
+        <li>{{ kitten.topping }}</li>
+        <li>{{ kitten.number }}</li>
+        <li>$ {{ kitten.price }} </li>
+    </ul>
+    {% endfor %}
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>Total: $ {{ order.total }} </li>
+    </ul>
+    
+    <p id="note">Note: If you can not see all of your order information, please Refresh the page.</p>
+      
+    <div>
+    <form onclick="return confirm('Do you really want to checkout')" onsubmit="alert('Order {{ order.key.id() }} has been checked out. Thank you. \nPlease check your email: {{ order.customer.email()}} for confirmation')" method="post">
+    <input type="submit" value="Checkout" class="add">
+    </form>
+    </div>
+    
+    <div>
+    <form method="post" onsubmit="return confirm('Create new order? This order will be cancelled')">
+	<input type="submit" value="Create new order" name="create" id="create">
+	</form>
+    </div>
+    
+    </section>
+<!--End of order list-->
+
+<!--start of tiptool-->
+	<div id="mystickytooltip" class="stickytooltip">
+
+		<div id="sticky1" class="atip">
+		<p class="name">Classic Salami And Cheese</p>
+        <p class="info">Our most popular topping in Cat-Top. Chewy, sticky cheese, fresh tomato sauce with salty salami slides, this kitten can brings happiness to everybody.</p>
+        <p class="price">Price:
+        <br/>Big + White/Black:  $93
+        <br/>Big + Rainbow:  $117
+        <br/>Medium + White/Black:  $85
+        <br/>Medium + Rainbow:  $105
+        <br/>Small + White/Black:  $77
+        <br/>Small + Rainbow:  $93</p>
+		</div>
+
+		<div id="sticky2" class="atip">
+		<p class="name">Pesto</p>
+        <p class="info">An auromatic sauce consists of crush garlic, basil, pamerzan cheese, toasted pine nuts, lemon juice, salt, black pepper and olive oil. Simple yet smell so good!</p>
+        <p class="price">Price:
+        <br/>Big + White/Black:  $95
+        <br/>Big + Rainbow:  $119
+        <br/>Medium + White/Black:  $87
+        <br/>Medium + Rainbow:  $107
+        <br/>Small + White/Black:  $79
+        <br/>Small + Rainbow:  $95</p>
+		</div>
+
+		<div id="sticky3" class="atip">
+		<p class="name">Mozzarella And Tomato</p>
+        <p class="info">White mozzarella cheese imported from Italy and local fresh tomato. This kitten is Tomato-perfect.</p>
+        <p class="price">Price:
+        <br/>Big + White/Black:  $97
+        <br/>Big + Rainbow:  $121
+        <br/>Medium + White/Black:  $89
+        <br/>Medium + Rainbow:  $109
+        <br/>Small + White/Black:  $81
+        <br/>Small + Rainbow:  $97</p>
+		</div>
+
+		<div id="sticky4" class="atip">
+		<p class="name">Olive, Red Pepper And Mushroom</p>
+        <p class="info">Cheese, olive, red pepper, button mushroom, and tomato sauce. This combination is perfect for vegie lover </p>
+        <p class="price">Price:
+        <br/>Big + White/Black:  $99
+        <br/>Big + Rainbow:  $123
+        <br/>Medium + White/Black:  $91
+        <br/>Medium + Rainbow:  $111
+        <br/>Small + White/Black:  $83
+        <br/>Small + Rainbow:  $99</p>
+		</div>
+
+		<div id="sticky5" class="atip">
+		<p class="name">Chocolate Sauce And Sprinkle</p>
+        <p class="info">Like sweets? Love chocolate and sprinkle. This kitten is so sexy with bitter sweet chocolate from head to toe, and a full coverage of rainbow sprinkle. Perfect for Valentine day!</p>
+        <p class="price">Price:
+        <br/>Big + White/Black:  $101
+        <br/>Big + Rainbow:  $125
+        <br/>Medium + White/Black:  $93
+        <br/>Medium + Rainbow:  $113
+        <br/>Small + White/Black:  $85
+        <br/>Small + Rainbow:  $101</p>
+		</div>
+
+		<div id="sticky6" class="atip">
+		<p class="name">Magic Blue Sauce And Fairy Dust</p>
+        <p class="info">Think magic and fairy dust only exist in Disney movies? This kitten will impress anybody who doesn't believe in fairytale.</p>
+        <p class="price">Price:
+        <br/>Big + White/Black:  $103
+        <br/>Big + Rainbow:  $127
+        <br/>Medium + White/Black:  $95
+        <br/>Medium + Rainbow:  $115
+        <br/>Small + White/Black:  $87
+        <br/>Small + Rainbow:  $103</p>
+		</div>	
+
+	</div>
+<!--End of tiptool-->
+   
+</div>
+<!--end of the container--> 
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/script/swapimages.js"></script>
+<script type="text/javascript" src="/script/stickytooltip.js"></script>
+</body>
+</html>
+{% endautoescape %}

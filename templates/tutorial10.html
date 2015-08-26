@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=620">
+	<title>HTML5 Demo: Drag and Drop, automatic upload</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!--link-->
+	<link rel="stylesheet" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style10.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+	<!--link-->
+</head>
+
+<body>
+
+<section id="section1" data-type="background" data-speed="20">
+
+    <img alt="#" src="/images/logo.png" width="80px" height="71px">
+    
+    <nav>
+    	<div id="menu1">
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/html/about.html">About</a></li>
+        <li><a href="javascript:animatedcollapse.toggle('menu2')">Tutorial</a></li>
+        </ul> 
+        </div>
+          
+        <div id="menu2">
+        <ul>
+        <li><a href="">Week 2</a></li>
+        <li><a href="/html/tutorial3.html">Week 3</a></li>
+        <li><a href="/html/tutorial4.html">Week 4</a></li>
+        <li><a href="/html/element.html">Week 5</a></li>
+        <li><a href="/tutorial6">Week 6</a></li>
+        <li><a href="/tutorial7">Week 7</a></li>
+        <li><a href="/tutorial8">Week 8</a></li>
+        <li><a href="/tutorial9">Week 9</a></li>
+        <li><a href="/tutorial10">Week 10</a></li>
+        </ul>
+        </div>     
+    </nav>
+    
+    <article>
+    <p id="title">Tutorial 10</p>
+    <p id="subTitle">Drag and drop images with automatic upload</p>
+    <p id="subTitle2">Based on original <a href="http://html5demos.com/dnd-upload">HTML5 Dnd-Upload</a></p>
+    
+    <div id="holder"></div>
+    
+    <div id="alert">
+	<p id="filereader">File API &amp; FileReader API not supported</p>
+	<p id="formdata">XHR2's FormData is not supported</p>
+	<p id="progress">XHR2's upload progress is not supported</p>
+    </div>
+    
+	<p id="progress">
+		Upload progress: <progress id="uploadprogress" min="0" max="100" value="0">0</progress>
+	</p>
+    
+	<p id="instruction">
+		Drag an image from your desktop on to the drop zone above to see the browser both render the preview, but also upload automatically to this server
+	</p>
+    
+	<section id="previous">
+		<p>Previously uploaded images:</p>
+		{% for image in images %}
+			<img src="/tutorial10/img?img_id={{ image.key.id() }}">
+		{% endfor %}
+	<section>
+    
+    </article>
+
+</section>
+
+<script>
+$(document).ready(function() {
+var holder = $('#holder')[0],
+	tests= {
+		filereader: typeof FileReader != 'undefined',
+		dnd: 'draggable' in document.createElement('span'),
+		formdata: !!window.FormData,
+		progress: "upload" in new XMLHttpRequest
+	},
+	support = {
+		filereader: $('#filereader')[0],
+		formdata: $('#formdata')[0],
+		progress: $('#progress')[0],
+	},
+	acceptedTypes = {
+		'image/png': true,
+		'image/jpeg': true,
+		'image/gif': true,
+	},
+
+	progress = $('#uploadprogress')[0],
+	fileupload = $('#upload')[0];
+
+	"filereader formdata progress".split(' ').forEach(function (api) {
+		if (tests[api] === false){
+			support[api].className = 'fail';
+		} else {
+			support[api].className = 'hidden';
+		}
+	});
+	var image = new Image();
+	function previewfile(file){
+		if (tests.filereader === true && acceptedTypes[file.type] === true){
+			var reader = new FileReader();
+			reader.onload = function (event) {
+				
+				image.src = event.target.result;
+				image.width = 250;
+				holder.appendChild(image);
+			};
+			reader.readAsDataURL(file);
+		} else {
+			holder.innerHTML += '<p>Uploaded ' + file.name + ' ' + (file.size ? (file.size/1024|0) + 'K' : '')
+			console.log(file);
+		}
+	}
+
+	function readfiles(files){
+		var formData = tests.formdata ? new FormData() : null;
+		for (var i = 0; i < files.length; i++) {
+			if (tests.formdata){
+				formData.append('file', files[i]);
+			}
+			previewfile(files[i]);	
+		}
+
+		if (tests.formdata){
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST','/tutorial10');
+			xhr.onload = function(){
+				progress.value = progress.innerHTML = 100;
+				$('#previous').append(image);
+			};
+
+	    if (tests.progress){
+	    	xhr.upload.onprogress = function (event){
+	    		if (event.lengthComputable){
+	    			var complete = (event.loaded / event.total * 100 | 0);
+	    			progress.value = progress.innerHTML = complete;
+	    		}
+	    	}
+	    }
+	    xhr.send(formData);
+		}
+	}
+
+	if (tests.dnd){
+		holder.ondragover = function() { this.className = 'hover'; return false;};
+		holder.ondragend = function() {this.className = ''; return false;};
+		holder.ondrop = function(e){
+			this.className = '';
+			e.preventDefault();
+			readfiles(e.dataTransfer.files);
+		}
+	}
+});
+</script>
+<script type="text/javascript" src="/script/animatedcollapse.js"></script>
+<script type="text/javascript">
+animatedcollapse.addDiv('menu2', 'fade=1,height=80px')
+animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
+	//$: Access to jQuery
+	//divobj: DOM reference to DIV being expanded/ collapsed. Use "divobj.id" to get its ID
+	//state: "block" or "none", depending on state
+}
+animatedcollapse.init()
+</script>
+</section>
+</body>
+</html>

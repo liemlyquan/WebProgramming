@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+	<title>Order Page</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/styleOrderprocess.css">
+<!--font-->   
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet' type='text/css'>
+<!--font-->  
+</head>
+<body>
+
+<!--start of the container--> 
+<div id="contianer">
+
+<!--navigation--> 
+	<nav>
+    <ul class="buttons" id="left">
+		<li><a href="{{ url|safe }}">{{ url_linktext }}</a></li>
+		<li><a href="/kitten/">Home</a></li>
+    </ul>
+    <ul class="buttons" id="right">
+		<li><a href="/kitten/places">Places</a></li>
+        <li><a href="/kitten/order">Order</a></li>
+    </ul>
+	</nav>
+<!--navigation--> 
+
+<!--shopping cart--> 
+    <img alt="#" src="/images/assignment2/shoppingCart.jpg">
+	<form method="post">
+	<input type="submit" value="Create new order" id="create">
+	</form>
+<!--shopping cart-->
+    
+</div>
+<!--start of the container-->
+</body>
+</html>
+{% endautoescape %}

@@ -1,0 +1,30 @@
+application: s3372702-s3426110
+version: 10
+runtime: python27
+api_version: 1
+threadsafe: true
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+- url: /css
+  static_dir: css
+- url: /script
+  static_dir: script
+- url: /images
+  static_dir: images
+- url: /html
+  static_dir: html
+- url: /kitten/html
+  static_dir: kitten/html
+- url: /kitten/.*
+  script: kitten.application
+- url: /.*
+  script: helloworld.application

@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: "Courier New";
+}
+
+/*****style section1*****/
+#section1 {
+	background-image: url(/images/home/background.jpg);
+	height: 900px; 
+	width: 1349px;
+    position: relative; 
+    box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+
+#section1 img{
+	position: relative;
+	top: 25px;
+	left: 277px;
+}
+
+/*****style navigation*****/
+#section1 nav{
+	position: relative;
+	right: 50px;
+	width: 680px;
+	height: 57px;
+	float: right;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+#menu1 ul{	
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#menu1 li{
+	float: left;
+	margin-bottom: 0px;
+}
+
+#menu1 a{
+	font-family: 'Roboto Slab', serif;
+	font-size: 21px;
+	text-decoration:none;
+	color: #000;
+    display:block;
+	padding-top: 30px;
+	padding-bottom: 0px;
+	width: 200px;
+	height: 29px;
+	margin-left: 13px;
+	margin-right: 13px;
+	text-align: center;
+}
+
+#menu1 a:hover{
+	background-color: #000;
+	color: #FFF;
+}
+
+#menu2{
+	display: none;
+	position: absolute;
+	top: 58px;
+}
+
+#menu2 ul{	
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#menu2 li{
+	float: left;
+	margin-bottom: 0px;
+}
+
+#menu2 a{
+	font-family: 'Roboto Slab', serif;
+	font-size: 17px;
+	text-decoration:none;
+	color: #333;
+    display:block;
+	background-color: #FFF;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	width: 226px;
+	height: 20px;
+	text-align: center;
+}
+
+#menu2 a:hover{
+	background-color: #000;
+	color: #FFF;
+}
+/*****end style navigation*****/
+
+#title{
+	font-family: 'Arvo', serif;
+	font-size: 80px;
+	text-align: center;
+	color: #FFF;
+	width: 450px;
+	background-color: #000;
+	position: absolute;
+	font-weight: 100;
+	top: 190px;
+	left: 100px;
+}
+
+#subTitle1{
+	font-family: 'Roboto Slab', serif;
+	font-size: 40px;
+	text-align: center;
+	width: 450px;
+	background-color: #CCC;
+	position: absolute;
+	top:285px;
+	left: 100px;
+}
+
+#subTitle2{
+	font-family: 'Roboto Slab', serif;
+	font-size: 40px;
+	text-align: center;
+	width: 450px;
+	background-color: #CCC;
+	position: absolute;
+	top:325px;
+	left: 100px;
+}
+
+#subTitle3{
+	font-family: 'Roboto Slab', serif;
+	font-size: 25px;
+	color: #333;
+	background-color: #CCC; 
+	text-align: center;
+	width: 450px;
+	position: absolute;
+	top:385px;
+	left: 100px;
+}
+
+#subTitle4{
+	font-size: 29px;
+	color: #333;
+	background-color: #CCC;
+	text-align: center;
+	width: 450px;
+	position: absolute;
+	top:425px;
+	left: 100px;
+}
+
+#subTitle5{
+	font-size: 20px;
+	color: #333;
+	text-align: center;
+	width: 450px;
+	position: absolute;
+	top:465px;
+	left: 100px;
+}
+
+/*****end style section1*****/
+
+/*****Tutorials style*****/
+
+#container_buttons{
+	width: 660px;
+	margin-left: 582px;
+	position: absolute;
+	top: 179px;
+}
+
+
+.toggle {
+	border-bottom: 2px;
+	border-bottom-style: solid;
+	text-align: left;
+	text-decoration:none;
+	color: #000;
+	position:relative;
+	width: 680px;
+}
+
+#container_buttons li p {
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+
+#container_buttons p:target{
+	display:block;
+}
+
+#container_buttons ul{
+	list-style-type: none;
+}
+
+#container_buttons a {
+	font-family: 'Roboto Slab', serif;
+	color: #000;
+	font-style: inherit;
+	display: block;
+	font-size: 17px;
+	text-decoration: none;
+	outline:none;
+}
+
+
+#container_buttons a:hover {
+	background-color: #000;
+	color: #FFF;
+}
+
+#container_buttons p {
+	font-family: "Courier New", sans-serif;
+	color: #000;
+	display: block;
+	font-size: 20px;
+}
+
+#container_buttons li{
+	margin:10px;
+}
+
+.weeks {
+	padding: 10px;
+}
+
+#sum2{
+	display: none;
+}
+
+#sum3{
+	display: none;
+}
+
+#sum4{
+	display: none;
+}
+
+#sum5{
+	display: none;
+}
+
+#sum6{
+	display: none;
+}
+
+#sum7{
+	display: none;
+}
+
+#sum8{
+	display: none;
+}
+
+#sum9{
+	display:none;
+}
+
+#sum10{
+	display:none;
+}
+/*****Tutorials style*****/
+
+
+

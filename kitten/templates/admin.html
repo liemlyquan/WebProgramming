@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+	<title>Admin Page</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/styleAdmin.css">
+<!--font-->   
+    <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet' type='text/css'>
+<!--font-->  
+
+<body>
+<!--start of the container-->
+	<div id="contianer">
+	<p class="title"> List of Order</p>
+    
+<!--start of order info-->  
+		<ul>
+        <li>Order's ID</li>
+        <li>Order's Status</li>
+        <li>Order's Date</li>
+        <li></li>
+        </ul>  
+	{% for order in orders %}
+	<div class="kitten" id="{{ order.key.id() }}">
+    	<ul>
+		<li><a href="/kitten/admin/{{ order.key.id() }}">{{ order.key.id() }}</a></li>
+		<li>{{ order.status}}</li>
+        <li>{{ order.date.strftime("%d/%m/%Y, %H:%M %z") }}</li>
+		<li><button type="button" class="delete">Delete</button></li>
+        </ul>
+	</div>
+	{% endfor %}
+<!--end of order info-->  
+    
+	<button type="button" id="deleteAll" name="deleteAll">Delete Unused</button>
+    
+	<a href="{{ url|safe }}" id="logOut" style="text-align:center;">{{ url_linktext }}</a>
+    
+    </div>
+<!--end of the container-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".delete").click(function(event){
+				var name = $(this).parent().parent().parent().attr("id");
+				$.ajax({
+					url: "/kitten/order/"+name,
+					type: 'DELETE',
+					dataType: 'text',
+					success: function(){
+						$('#'+name).remove();
+					}
+				});
+			});
+		});
+	</script>
+    
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#deleteAll").click(function(event){
+				$.ajax({
+					type: 'DELETE',
+					dataType: 'text',
+				});
+			});
+		});
+	</script>
+    
+</body>
+</head>
+</html>
+{% endautoescape %}

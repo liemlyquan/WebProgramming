@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+	<title>Order {{ order.key.id() }}</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/styleAdminOrderView.css">
+<!--font-->   
+    <link href='http://fonts.googleapis.com/css?family=Limelight' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Simonetta' rel='stylesheet' type='text/css'>
+<!--font-->  
+</head>
+
+<body>
+<!--start of the container-->
+	<div id="contianer">
+    
+    <p class="title">Order's Info</p>
+
+<!--order info--> 
+    <section id="generalInfo">
+    	<ul>
+		<li>Customer's name: {{ order.customer }}</li>
+		<li>Order's date: {{ order.date.strftime("%d %B %Y %H:%M ") }}</li>
+    	</ul>
+    </section>  
+    <section id="table">
+    	<ul>
+        <li>Type</li>
+        <li>Size</li>
+        <li>Topping</li>
+        <li>Quantity</li>
+        <li>Price</li>
+        </ul>
+	{% for kitten in kittens %}
+    	<ul>
+		<li>{{ kitten.type }}</li>
+        <li>{{ kitten.size }}</li>
+        <li>{{ kitten.topping }}</li>
+        <li>{{ kitten.number}}</li>
+        <li>$ {{ kitten.price }}</li>
+        </ul>
+    {% endfor %}
+    	<ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li>Total: $ {{ order.total }}</li>
+        </ul>
+    </section>
+        
+    <form method="post" action="/kitten/admin/{{ order.key.id() }}">
+    {% if order.status == "Pending" %}
+    <input type="submit" value="Complete this order" name="complete" id="complete">
+    {% else %}
+    <input type="submit" value="Uncomplete this order" name="uncomplete" id="uncomplete">
+    {% endif %}
+    </form>
+
+    
+    <a href="/kitten/admin"><button type="button" class="back">Back</button></a>
+
+    </div>
+<!--end of the container-->
+
+</body>
+</html>
+{% endautoescape %}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+
+<!--link-->
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo:700' rel='stylesheet' type='text/css'>
+<!--link-->
+
+</head>
+
+<body>
+<section id="section1" data-type="background" data-speed="20">
+
+    <img alt="#" src="/images/logo.png">
+    
+    <nav>
+    	<div id="menu1">
+        <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="/html/about.html">About</a></li>
+        <li><a href="javascript:animatedcollapse.toggle('menu2')">Tutorial</a></li>
+        </ul> 
+        </div>
+          
+        <div id="menu2">
+        <ul>
+        <li><a href="/html/tutorial2.html">Week 2</a></li>
+        <li><a href="/html/tutorial3.html">Week 3</a></li>
+        <li><a href="/html/tutorial4.html">Week 4</a></li>
+        <li><a href="/html/element.html">Week 5</a></li>
+        <li><a href="/tutorial6">Week 6</a></li>
+        <li><a href="/tutorial7">Week 7</a></li>
+        <li><a href="/tutorial8">Week 8</a></li>
+        <li><a href="/tutorial9">Week 9</a></li>
+        <li><a href="/tutorial10">Week 10</a></li>
+        </ul>
+        </div>     
+    </nav>
+    
+    <article>
+    <p id="title">Welcome</p>
+    <p id="subTitle1">WEB-PROGRAMING</p>
+    <p id="subTitle2">COSC2430</p>
+    <p id="subTitle3">SEM B 2013</p>
+    <p id="subTitle4">Coding and Design</p>
+    <p id="subTitle5">Hello, {{ nickname }}</p>
+    </article>
+    
+    <div id="container_buttons">
+   
+	<ul>
+	<li class="toggle">
+	<a href="javascript:animatedcollapse.toggle('sum2')" class="weeks">Week 2</a>
+    <div id="sum2">
+	<p>
+	The goal of this tutorial is to update a web application to serve static files including a HTML5 file and an image.
+	<a href="/html/tutorial2.html">See our work!</a>
+	</p>
+    </div>
+	</li>
+                    
+	<li class="toggle">
+	<a href="javascript:animatedcollapse.toggle('sum3')" class="weeks">Week 3</a>
+    <div id="sum3">
+	<p>
+	The aim of this tutorial is to learn how to access HTML5 features(Popcorn time!).  
+    <a href="/html/tutorial3.html">See our work!</a>
+	</p>
+    </div>
+	</li>
+                    
+	<li class="toggle">
+	<a href="javascript:animatedcollapse.toggle('sum4')" class="weeks">Week 4</a>
+    <div id="sum4">
+	<p>
+	The aim of this tutorial is to learn how to use CSS features to create a stylish web page (A kitten is involved in the process).
+    <a href="/html/tutorial4.html">See our work!</a>
+	</p>
+    </div>
+	</li>
+                         
+	<li class="toggle">
+	<a href="javascript:animatedcollapse.toggle('sum5')" class="weeks">Week 5</a>
+    <div id="sum5">
+	<p>
+	The aim of this tutorial is to learn how to use CSS features to create a periodic table
+    <a href="/html/element.html">See our work!</a>
+	</p>
+    </div>
+	</li>
+    
+    <li class="toggle">
+	<a href="javascript:animatedcollapse.toggle('sum6')" class="weeks">Week 6</a>
+    <div id="sum6">
+	<p>
+	The goal of this turorial is to learn more about how to use Python to create dynamic content
+    <a href="/tutorial6">See our work!</a>
+	</p>
+    </div>
+	</li>
+    
+    <li class="toggle">
+    <a href="javascript:animatedcollapse.toggle('sum7')" class="weeks">Week 7</a>
+    <div id="sum7">
+    <p>
+    The goal of this tutorial is to learn to use the datastore
+    <a href="/tutorial7">See our work!</a>
+    </p>
+    </div>
+    </li>
+    
+    <li class="toggle">
+    <a href="javascript:animatedcollapse.toggle('sum8')" class="weeks">Week 8</a>
+    <div id="sum8">
+    <p>
+    The goal of this tutorial is to learn how to make a relation in datastore as well as using AJAX for DELETE method
+    <a href="/tutorial8">See our work!</a>
+    </p>
+    </div>
+    </li>
+    
+    <li class="toggle">
+    <a href="javascript:animatedcollapse.toggle('sum9')" class="weeks">Week 9</a>
+    <div id="sum9">
+    <p>
+    The goal of this tutorial is to learn how to use blob to upload and store images
+    <a href="/tutorial9">See our work!</a>
+    </p>
+    </div>
+    </li>
+    
+    <li class="toggle">
+    <a href="javascript:animatedcollapse.toggle('sum10')" class="weeks">Week 10</a>
+    <div id="sum10">
+    <p>
+    The goal of this tutorial is to learn how to use blob to upload and store images
+    <a href="/tutorial10">See our work!</a>
+    </p>
+    </div>
+    </li>
+    
+	</ul>
+					
+    </div>
+
+</section>
+
+<!--script-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="/script/script.js"></script>
+<script type="text/javascript" src="script/animatedcollapse.js"></script>
+<script type="text/javascript">
+animatedcollapse.addDiv('menu2', 'fade=1,height=80px')
+animatedcollapse.addDiv('sum2', 'fade=1,height=110px')
+animatedcollapse.addDiv('sum3', 'fade=1,height=100px')
+animatedcollapse.addDiv('sum4', 'fade=1,height=110px')
+animatedcollapse.addDiv('sum5', 'fade=1,height=110px')
+animatedcollapse.addDiv('sum6', 'fade=1,height=110px')
+animatedcollapse.addDiv('sum7', 'fade=1,height=100px')
+animatedcollapse.addDiv('sum8', 'fade=1,height=70px')
+animatedcollapse.addDiv('sum9', 'fade=1,height=100px')
+animatedcollapse.addDiv('sum10', 'fade=1,height=100px')
+
+animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
+    //$: Access to jQuery
+    //divobj: DOM reference to DIV being expanded/ collapsed. Use "divobj.id" to get its ID
+    //state: "block" or "none", depending on state
+}
+
+animatedcollapse.init()
+</script>
+<!--script-->
+
+</body>
+</html>
+{% endautoescape %}

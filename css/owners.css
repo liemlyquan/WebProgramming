@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+a{
+	display: inline-block;
+	margin-left: 280px;
+	margin-bottom: 25px;
+	font-size: 20px;
+	font-family: "Courier New";
+	margin-top: 20px;
+}
+
+p:first-child{
+	font-family: "Courier New";
+	font-size: 23px;
+	color: #000;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+p{
+	font-family: "Courier New";
+	font-size: 18px;
+	color: #000;
+	text-align: center;
+}
+
+#container{
+	margin-left: 300px;
+	width: 750px;
+	font-size: 18px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	border: double;
+	border-width: 4px;
+	padding: 15px;
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+	<title>Update a Cat</title>
+    <link rel="stylesheet" type="text/css" href="/css/cat.css">
+</head>
+<body>
+
+<section id="form">
+<form action="/tutorial8/cat/{{ cat.name }}" method="post">
+
+	<p class="subTitle">General info</p>
+    
+    <div class="info">
+	<div>
+		<label for="name">Cat name:</label>
+		<input type="text" name="name" value="{{ cat.name }}" / size="30">
+	</div>
+	<div>
+		<label for="description">Description:</label>
+		<textarea name="description" rows="3" cols="24">{{ cat.description }}</textarea>
+	</div>
+	<div>
+		<label for="owner">Owner:</label>
+		<input type="text" name="owner" value="{{ cat.owner.get().name }}"/ size="30">
+	</div>
+    </div>
+    
+	<p class="subTitle">Cat's Birthday</p>
+	<div class="info">
+    
+		<div>
+			<label for="day">Day:</label>
+			<input type="text" name="day" value="{{ cat.date_of_birth.day }}"/ size="30">
+		</div>
+		<div>
+			<label for="month">Month:</label>
+			<input type="text" name="month" value="{{ cat.date_of_birth.month }}"/ size="30">
+		</div>
+		<div>
+			<label for="year">Year:</label>
+			<input type="text" name="year" value="{{ cat.date_of_birth.year }}"/ size="30">
+		</div>
+	</div>
+    
+	<div><input type="submit" value="Update"></div>
+	</form>
+</section>
+
+</body>
+</html>
+{% endautoescape %}

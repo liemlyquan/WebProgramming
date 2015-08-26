@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: "Courier New";
+}
+
+/*****style section1*****/
+#section1 {
+	background: url(/images/tutorial2/background.gif)50% 0 no-repeat fixed; 
+	height: 768px; 
+	width: 1349px;
+    position: relative; 
+    box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+
+#section1 img{
+	position: relative;
+	top: 25px;
+	left: 277px;
+}
+
+/*****style navigation*****/
+#section1 nav{
+	position: relative;
+	right: 50px;
+	width: 680px;
+	height: 57px;
+	float: right;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+}
+
+#menu1 ul{	
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#menu1 li{
+	float: left;
+	margin-bottom: 0px;
+}
+
+#menu1 a{
+	font-family: 'Roboto Slab', serif;
+	font-size: 21px;
+	text-decoration:none;
+	color: #000;
+    display:block;
+	padding-top: 30px;
+	padding-bottom: 0px;
+	width: 200px;
+	height: 29px;
+	margin-left: 13px;
+	margin-right: 13px;
+	text-align: center;
+}
+
+#menu1 a:hover{
+	background-color: #000;
+	color: #FFF;
+	font-weight:bold;
+}
+
+#menu2{
+	display: none;
+	position: absolute;
+	top: 58px;
+}
+
+#menu2 ul{	
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+#menu2 li{
+	float: left;
+	margin-bottom: 0px;
+}
+
+#menu2 a{
+	font-family: 'Roboto Slab', serif;
+	font-size: 17px;
+	text-decoration:none;
+	color: #333;
+    display:block;
+	padding-top: 20px;
+	padding-bottom: 5px;
+	width: 226px;
+	height: 20px;
+	text-align: center;
+}
+
+#menu2 a:hover{
+	background-color: #000;
+	color: #FFF;
+
+}
+/*****end style navigation*****/
+
+#title{
+	font-family: 'Roboto Slab', serif;
+	font-size: 80px;
+	text-align: center;
+	color: #000;
+	width: 450px;
+	position: absolute;
+	font-weight: 100;
+	top: 220px;
+	left: 100px;
+}
+
+#subTitle{
+	font-size: 29px;
+	text-align: center;
+	width: 450px;
+	position: absolute;
+	top:315px;
+	left: 100px;
+}
+/*****end style section1*****/
+
+/*****style section2*****/
+#section2{
+	background: url(/images/tutorial2/background1.gif)50% 0 no-repeat fixed;
+	width: 1349px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);	
+}
+
+#section2 article{
+	position: relative;
+	left: 620px;
+	width: 680px;
+}
+
+.question {
+	font-size: 23px;
+	font-weight:bold;
+}
+
+#section2 ul{
+	font-size: 18px;
+}
+
+#section2 b{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#section2 article div{
+	margin: 40px;
+}
+/*****end style section2*****/
+
+#section3 {  
+	background: url(/images/tutorial2/background2.gif)50% 0 no-repeat fixed;
+	width: 1349px;
+	height: 600px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+    box-shadow:inset 0px 10px 10px rgba(0,0,0,0.3);
+}
+
+#section3 p{
+	font-size: 25px;
+	font-weight:bold;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+#section3 img{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+

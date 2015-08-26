@@ -1,0 +1,86 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro|Jacques+Francois);
+
+.group{
+	font-size:12px;
+	font-family: 'Jacques Francois', serif;
+}
+
+.symbol{
+	font-size: 20px;
+	font-weight: 500;
+	font-family: 'Jacques Francois', serif;
+}
+
+.name, .number, .molar{
+	font-family: 'Source Code Pro', sans-serif;
+	font-size: 12px;
+}
+
+body{
+	display:table;
+	table-layout: fixed;
+}
+
+#row_0, #row_1, #row_2, #row_3, #row_4, #row_5, #row_6{
+	display: table-row;
+}
+
+.element{
+	padding: 3px;
+	display: table-cell;
+}
+
+.number{
+	font-size: 10px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+span.molar{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+[id="2"], [id="10"], [id="18"], [id="36"], [id="54"]{
+	background-color:#82ca9c;
+	border: 1px solid;
+}
+
+.pos_0{
+	background:#2d98c1;
+	border: 1px solid;
+}
+
+[id="1"]{
+	background:#a1a1a1;
+	border: 1px solid;
+}
+
+[id="4"],[id="12"],[id="20"],[id="38"],[id="56"], [id="88"]{
+	background:#cc3f43;
+	border: 1px solid;
+}
+
+[id="21"], [id="39"], [id="22"], [id="40"], [id="23"], [id="41"], [id="24"], [id="42"], [id="25"], [id="43"], [id="26"], [id="44"], [id="27"], [id="45"], [id="28"], [id="46"], [id="29"], [id="47"], [id="30"], [id="48"]{
+	background-color: #f0ea75;
+	border: 1px solid;
+}
+
+[id="9"], [id="17"], [id="35"], [id="53"]{
+	background-color: #a864a8;
+	border: 1px solid;
+}
+
+[id="6"], [id="7"], [id="8"], [id="15"], [id="16"], [id="34"]{
+	background-color: #bae8e5;
+	border: 1px solid;
+}
+
+[id="5"], [id="14"], [id="32"], [id="33"], [id="51"], [id="52"]{
+	background-color:#dedede;
+	border: 1px solid;
+}
+
+[id="13"], [id="31"], [id="49"], [id="50"]{
+	background:#c4db95;
+	border: 1px solid;
+}
